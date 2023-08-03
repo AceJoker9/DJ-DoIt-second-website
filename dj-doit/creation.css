@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fsportshub.cbsistatic.com%2Fi%2Fr%2F2023%2F01%2F23%2F9edd4df5-1f1f-4f64-8849-58df62951cf8%2Fthumbnail%2F1200x675%2F54dbe3c5d289d65016b1ba3fb2e05c7e%2Fcaleb-williams.jpg&tbnid=_2R8Lbwc3TzjaM&vet=12ahUKEwjC542L0LmAAxVQEN4AHfdBCh0QMygBegUIARD1AQ..i&imgrefurl=https%3A%2F%2Fwww.cbssports.com%2Fcollege-football%2Fnews%2Fearly-look-at-the-top-20-nfl-draft-eligible-college-football-players-taking-the-field-in-2023%2F&docid=ZgmqXrDVNjZLtM&w=1200&h=675&q=football%20player&ved=2ahUKEwjC542L0LmAAxVQEN4AHfdBCh0QMygBegUIARD1AQ');
+    background-position: center center;
+}
+
+.container {
+    display:flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat:no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor:pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opactiy 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width:10vw;
+    }
+}
+
+
+.panel:nth-of-type(5) {
+    display: none;
+}
